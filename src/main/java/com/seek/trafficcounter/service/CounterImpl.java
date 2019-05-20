@@ -21,7 +21,7 @@ public class CounterImpl implements Counter {
 
 		Count count = new Count();
 
-		File file = new File(getClass().getClassLoader().getResource(fileName).getFile());
+		File file = new File(fileName);
 
 		BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 

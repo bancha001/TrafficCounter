@@ -10,7 +10,7 @@ public class Application {
 	public static void main(String[] args){
 		Counter counter = new CounterImpl();
 		try {
-			String fileName = "traffic.log";
+			String fileName = args[0];
 			Count count = counter.processTrafficFromFile(fileName);
 			System.out.println("Number of cars in total :"+count.getTotal());
 

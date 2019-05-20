@@ -24,7 +24,7 @@ public class CounterImplTest {
 
 		Counter counter = new CounterImpl();
 		try {
-			Count count = counter.processTrafficFromFile("traffic.log");
+			Count count = counter.processTrafficFromFile(getClass().getClassLoader().getResource("traffic.log").getFile());
 			assertEquals(count.getTotal(),411);
 			assertEquals(count.getDayTraffics().get(0).getCount(),179);
 			assertEquals(count.getTop3Traffics().get(0).getCount(),46);
